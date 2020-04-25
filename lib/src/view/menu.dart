@@ -27,7 +27,7 @@ class MenuViewState extends State<MenuView> {
         padding: EdgeInsets.all(10.00),
         child: GridView.count(crossAxisCount: 2,
         children: <Widget>[
-          Card(
+          /*Card(
             margin: EdgeInsets.all(10.00),
             child: InkWell(
              onTap: (){
@@ -44,7 +44,7 @@ class MenuViewState extends State<MenuView> {
               ),
              ),
             ),
-          ),
+          ),*/
            Card(
             margin: EdgeInsets.all(10.00),
             child: InkWell(
