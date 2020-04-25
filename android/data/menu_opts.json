@@ -1,0 +1,24 @@
+
+{
+    "nombreApp" : "Componentes",
+"rutas":[
+    {
+        "ruta" : "cliente",
+        "icon" : "supervised_user_circle",
+        "texto" : "Estado de Cuentas"
+      
+    },
+
+    {
+        "ruta" : "puestos",
+        "icon" : "laptop",
+        "texto" : "Estado de Cuentas"
+    },
+
+    {
+        "ruta" : "fechasPagos",
+        "icon" : "monetization_on",
+        "texto" : "Estado de Cuentas"
+    }
+]
+}

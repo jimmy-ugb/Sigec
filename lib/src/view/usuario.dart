@@ -38,7 +38,7 @@ class UsuarioViewState extends State<UsuarioView> {
   }
 
   Widget renderEncabezado() {
-    String nombre = "Krissia";
+    String nombre = "Jaime Manzanares";
     return Center(
       child: Row(children: <Widget>[
         Icon(

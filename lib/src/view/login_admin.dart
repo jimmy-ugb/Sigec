@@ -86,7 +86,7 @@ class LoginAdminViewState extends State<LoginAdminView> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Sesión Administrador",
+                                "Administrador",
                                 style: TextStyle(
                                   fontSize: 21.0,
                                   color: Colors.black,

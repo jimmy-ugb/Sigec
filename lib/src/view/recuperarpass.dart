@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeView extends StatefulWidget {
+class ResPassw extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return HomeViewState();
+    return ResPasswViewState();
   }
 }
 
-class HomeViewState extends State<HomeView> {
+class ResPasswViewState extends State<ResPassw> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,10 +86,10 @@ class HomeViewState extends State<HomeView> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Iniciar Sesión",
+                                "Recuperar Contraseña",
                                 style: TextStyle(
                                   fontSize: 21.0,
-                                  color: Colors.black,
+                                  color: Colors.red,
                                 ),
                               )
                             ],
@@ -99,26 +99,23 @@ class HomeViewState extends State<HomeView> {
                           ),
                           TextFormField(
                             decoration: InputDecoration(
-                                labelText: "Usuario",
-                                hintText: "asm0000",
+                                labelText: "Nueva Contraseña",
                                 hintStyle: TextStyle(color: Colors.grey[500]),
                                 labelStyle: TextStyle(color: Colors.grey[500]),
                                 border: UnderlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
-                                icon: Text(
-                                  "@",
-                                  style: TextStyle(
-                                      fontSize: 30.0,
-                                      color: Colors.orange[700]),
-                                )),
+                                icon: Icon(
+                                  Icons.looks,
+                                  color: Colors.orange[700],
+                                  )),
                           ),
                           Divider(
                             color: Colors.grey,
                           ),
                           TextFormField(
                             decoration: InputDecoration(
-                                labelText: "Passsword",
+                                labelText: "Confirme Contraseña",
                                 hintText: "********",
                                 hintStyle: TextStyle(color: Colors.grey[500]),
                                 labelStyle: TextStyle(color: Colors.grey[500]),
@@ -140,7 +137,7 @@ class HomeViewState extends State<HomeView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  "Ingresar",
+                                  "Recuperar Contraña",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -154,7 +151,6 @@ class HomeViewState extends State<HomeView> {
                         ],
                       ),
                     ),
-                    renderCodigoView(),
                   ],
                 ),
               ],
@@ -163,12 +159,4 @@ class HomeViewState extends State<HomeView> {
         ));
   }
 
-  Widget renderCodigoView() {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 0.00, vertical: 15.00),
-        child: Text("¿Olvidaste tu Contraseña?",
-            style: TextStyle(color: Colors.black)));
-            
-          
-  }
 }
