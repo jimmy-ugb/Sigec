@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeView extends StatefulWidget {
+class LoginAdminView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return HomeViewState();
+    return LoginAdminViewState();
   }
 }
 
-class HomeViewState extends State<HomeView> {
+class LoginAdminViewState extends State<LoginAdminView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,7 +86,7 @@ class HomeViewState extends State<HomeView> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Iniciar Sesión",
+                                "Sesión Administrador",
                                 style: TextStyle(
                                   fontSize: 21.0,
                                   color: Colors.black,
@@ -99,7 +99,7 @@ class HomeViewState extends State<HomeView> {
                           ),
                           TextFormField(
                             decoration: InputDecoration(
-                                labelText: "Usuario",
+                                labelText: "Usuario Admin",
                                 hintText: "asm0000",
                                 hintStyle: TextStyle(color: Colors.grey[500]),
                                 labelStyle: TextStyle(color: Colors.grey[500]),
