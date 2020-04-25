@@ -19,7 +19,7 @@ class MenuViewState extends State<MenuView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: Text("MENU 2"),
+        title: Text("MENU"),
         backgroundColor: Colors.green[700],
       ),
       backgroundColor: Colors.grey[300],
