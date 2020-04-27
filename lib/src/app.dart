@@ -1,4 +1,4 @@
-import 'package:aplicacion_01/src/view/home_view.dart';
+import 'package:aplicacion_01/src/view/menu.dart';
 import 'package:flutter/material.dart';
 //import 'usuario.dart';
 
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         
       ),
 
-          home:HomeView(),
+  
+     home:MenuView(),
   
     );
   }
