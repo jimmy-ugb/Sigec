@@ -1,4 +1,4 @@
-import 'package:aplicacion_01/src/view/menu.dart';
+import 'package:aplicacion_01/src/view/fechasPagos.dart';
 import 'package:flutter/material.dart';
 //import 'usuario.dart';
 
@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
         
       ),
 
-  
-     home:MenuView(),
+         home:FechasPagoView(),
   
     );
   }

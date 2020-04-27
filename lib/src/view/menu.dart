@@ -42,7 +42,7 @@ class MenuViewState extends State<MenuView> {
             margin: EdgeInsets.all(10.00),
             child: InkWell(
              onTap: (){
-              
+               Navigator.pushNamed(context,"/fechasPagos");
              },
              splashColor: Colors.green, 
              child: Center(
