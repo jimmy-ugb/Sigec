@@ -59,14 +59,16 @@ class MenuViewState extends State<MenuView> {
            Card(
             margin: EdgeInsets.all(10.00),
             child: InkWell(
-             onTap: (){},
+             onTap: (){
+               Navigator.pushNamed(context,"/HomeView");
+             },
              splashColor: Colors.green, 
              child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
                  Icon(Icons.close, size: 80,color: Colors.red,),
-                 Text("Cerrar Sesioón", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
+                 Text("Cerrar Sesión", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),
              ),

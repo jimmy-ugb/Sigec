@@ -95,7 +95,9 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
                 Card(
             margin: EdgeInsets.all(10.00),
             child: InkWell(
-             onTap: (){},
+             onTap: (){
+               Navigator.pushNamed(context,"/HomeView");
+             },
              splashColor: Colors.green, 
              child: Center(
               child: Column(
