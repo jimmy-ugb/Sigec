@@ -24,7 +24,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
             margin: EdgeInsets.all(10.00),
             child: InkWell(
              onTap: (){
-              
+               Navigator.pushNamed(context, "/puesto1");
              },
              splashColor: Colors.green, 
              child: Center(
@@ -42,7 +42,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
             margin: EdgeInsets.all(10.00),
             child: InkWell(
              onTap: (){
-              
+               Navigator.pushNamed(context,"/puesto2");
              },
              splashColor: Colors.cyan, 
              child: Center(
@@ -60,7 +60,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
             margin: EdgeInsets.all(10.00),
             child: InkWell(
              onTap: (){
-               
+               Navigator.pushNamed(context,"/puesto3");
              },
              splashColor: Colors.green, 
              child: Center(
