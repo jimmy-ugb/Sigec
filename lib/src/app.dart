@@ -1,5 +1,5 @@
 import 'package:aplicacion_01/src/view/fechasPagos.dart';
-import 'package:aplicacion_01/src/view/menu.dart';
+import 'package:aplicacion_01/src/view/home_view.dart';
 import 'package:aplicacion_01/src/view/puesto1.dart';
 import 'package:aplicacion_01/src/view/puesto2.dart';
 import 'package:aplicacion_01/src/view/puesto3.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           "/totalpuestos" : (BuildContext context) => TotalPuestosView(),
         },
 
-     home:MenuView(),
+     home:HomeView(),
   
     );
   }
