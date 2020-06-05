@@ -31,7 +31,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
-                 Icon(Icons.laptop, size: 80,color: Colors.orange,),
+                 Icon(Icons.store, size: 80,color: Colors.orange,),
                  Text("Puesto #1", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),
@@ -49,7 +49,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
-                 Icon(Icons.laptop, size: 80,color: Colors.cyan,),
+                 Icon(Icons.store, size: 80,color: Colors.cyan,),
                  Text("Puesto #2", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),
@@ -67,7 +67,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
-                 Icon(Icons.laptop, size: 80,color: Colors.cyan,),
+                 Icon(Icons.store, size: 80,color: Colors.cyan,),
                  Text("Puesto #3", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),
@@ -85,7 +85,7 @@ class MenuPuestosViewState extends State<MenuPuestosView> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
-                 Icon(Icons.laptop, size: 80,color: Colors.orange,),
+                 Icon(Icons.store, size: 80,color: Colors.orange,),
                  Text("Total de espacio", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),

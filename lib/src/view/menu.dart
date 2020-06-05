@@ -31,7 +31,7 @@ class MenuViewState extends State<MenuView> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                children: <Widget>[
-                 Icon(Icons.laptop, size: 80,color: Colors.orange,),
+                 Icon(Icons.store, size: 80,color: Colors.orange,),
                  Text("Puestos Asignados", style: TextStyle(fontSize: 20.00), textAlign: TextAlign.center,)
                ], 
               ),

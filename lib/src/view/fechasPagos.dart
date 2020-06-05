@@ -1,66 +1,27 @@
-import 'package:flutter/material.dart';
+//import 'dart:async';
 
-class FechasPagoView extends StatefulWidget {
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'trip.dart';
+
+class FechasPagosView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return FechasPagoViewState();
+    return FechasViewState();
   }
 }
 
-class FechasPagoViewState extends State<FechasPagoView> {
+class FechasViewState extends State<FechasPagosView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: Text("Fechas de Pago"),
         backgroundColor: Colors.green[700],
+        actions: <Widget>[
+          renderEncabezado(),
+        ],
       ),
-      /*drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: new Text(
-                "SIGEC SYSTEM",
-                style:
-                    new TextStyle(fontWeight: FontWeight.w700, fontSize: 17.0),
-              ),
-              accountEmail: new Text("Correo Electronico"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage("url"),
-              ),
-              decoration: new BoxDecoration(color: Colors.green[600]),
-            ),
-            ListTile(
-              leading: Icon(Icons.description,
-              color: Colors.green,),
-              title: Text("Descipción de Puestos"),
-            ),
-            ListTile(
-              leading: Icon(Icons.date_range,
-              color: Colors.green,),
-              title: Text("Fechas de Pago"),
-            ),
-            ListTile(
-              leading: Icon(Icons.close,
-              color: Colors.green,),
-              title: Text("Cerrar Sesión"),
-            ),
-          ],
-        ),
-      ),*/
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
-        decoration: BoxDecoration(color: Colors.white),
-        child: Column(
-          children: [
-            renderEncabezado(),
-            renderDivisor(),
-            Container(
-              child: bodyData(),
-            ),
-          ],
-        ),
-      ),
+      body: ListadoFechas(),
     );
   }
 
@@ -68,109 +29,109 @@ class FechasPagoViewState extends State<FechasPagoView> {
     String nombre = "Veronica Marilu Romero Menjivar";
     return Center(
       child: Row(children: <Widget>[
-        Icon(
-          Icons.supervised_user_circle,
-          color: Colors.green,
-          size: 40,
-        ),
+        IconButton(
+            icon: Icon(
+              Icons.supervised_user_circle,
+              size: 30.00,
+            ),
+            onPressed: () {}),
         Container(
           child: Text(
-            "Bienvenido: \n $nombre",
-            style: TextStyle(color: Colors.black),
+            "Bienvenid@: \n $nombre \n Datos Generales",
+            style: TextStyle(color: Colors.white),
           ),
         ),
         Container(
-            child: Icon(Icons.exit_to_app, color: Colors.green, size: 40)),
-      ]),
-    );
-  }
-
-  Widget renderDivisor() {
-    return Center(
-      child: Row(children: [
-        Expanded(
-          child: Divider(
-            height: 1,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Text("S", style: TextStyle(color: Colors.green)),
-        ),
-        Expanded(
-          child: Divider(
-            height: 1,
-          ),
-        ),
+            child: IconButton(
+                icon: Icon(
+                  Icons.exit_to_app,
+                  size: 30.00,
+                  color: Colors.red,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/HomeView");
+                })),
       ]),
     );
   }
 }
 
-Widget bodyData() => DataTable(
-        columns: <DataColumn>[
-          DataColumn(
-            label: Text("Mes:",
-                style: TextStyle(
-                  color: Colors.blue,
-                )),
-            numeric: false,
-            onSort: (i, b) {},
-          ),
-          DataColumn(
-            label: Text("Costo:", style: TextStyle(color: Colors.blue)),
-            numeric: false,
-            onSort: (i, b) {},
-          ),
-          DataColumn(
-            label: Text("Fecha Venc:", style: TextStyle(color: Colors.blue)),
-            numeric: false,
-            onSort: (i, b) {},
-          ),
-       
-        ],
-        rows: datosFechaCadenas
-            .map((datosFechaCadena) => DataRow(cells: [
-                  DataCell(
-                    Text(datosFechaCadena.mes),
-                    showEditIcon: false,
-                    placeholder: false,
-                  ),
-                  DataCell(
-                    Text(datosFechaCadena.costo),
-                    showEditIcon: false,
-                    placeholder: false,
-                  ),
-                  DataCell(
-                    Text(datosFechaCadena.fechaVenc),
-                    showEditIcon: false,
-                    placeholder: false,
-                  ),
+class ListadoFechas extends StatelessWidget {
+  final List<Trip> tripList = [
+    Trip("ENERO", DateTime.now(), DateTime.now(), 300.00, "Car"),
+    Trip("FERERO", DateTime.now(), DateTime.now(), 100.00, "Car"),
+    Trip("MARZO", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("ABRIL", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("MAYO", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("JUNIO", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("JULIO", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("AGOSTO", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("SEPTIEMBRE", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("OCTUBRE", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("NOVIEMBRE", DateTime.now(), DateTime.now(), 200.00, "Car"),
+    Trip("DICIEMBRE", DateTime.now(), DateTime.now(), 200.00, "Car"),
+  ];
 
-                  
-                ]),)
-            .toList(),);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: new ListView.builder(
+            itemCount: tripList.length,
+            itemBuilder: (BuildContext context, int index) =>
+                buildTripCard(context, index)));
+  }
 
-class Fechas {
-  String mes;
-  String costo;
-  String fechaVenc;
-  
-
-  Fechas({
-    this.mes,
-    this.costo,
-    this.fechaVenc,
-    
-  });
+  Widget buildTripCard(BuildContext context, int index) {
+    final Trip = tripList[index];
+    return Container(
+      color: Colors.green[300],
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0, bottom: 3.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(Trip.title,
+                        style: new TextStyle(
+                            fontSize: 20.0, color: Colors.orange[700])),
+                    Spacer(),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0, bottom: 8.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                        "${DateFormat('dd/MM/yy').format(Trip.starDate).toString()} -- ${DateFormat('dd/MM/yy').format(Trip.starDate).toString()}"),
+                    Spacer(),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0, bottom: 8.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      "\$${Trip.budget.toStringAsFixed(2)}",
+                      style:
+                          new TextStyle(fontSize: 25.00, color: Colors.black),
+                    ),
+                    Spacer(),
+                    Icon(
+                      Icons.details,
+                      color: Colors.green[700],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
-
-var datosFechaCadenas = <Fechas>[
-  Fechas(mes: "Enero", costo: "12.00",fechaVenc: "03 de febreo"),
-  Fechas(mes: "Febrero", costo: "12.00",fechaVenc: "03 de Marzo"),
-  Fechas(mes: "Marzo", costo: "12.00",fechaVenc: "03 de abril"),
-  Fechas(mes: "Abril", costo: "12.00",fechaVenc: "03 de Mayo"),
-  Fechas(mes: "Mayo", costo: "12.00",fechaVenc: "03 de Junio"),
-  Fechas(mes: "Junio", costo: "12.00",fechaVenc: "03 de Julio"),
-];
-

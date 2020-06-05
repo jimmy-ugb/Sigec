@@ -1,11 +1,13 @@
 import 'package:aplicacion_01/src/view/fechasPagos.dart';
 import 'package:aplicacion_01/src/view/home_view.dart';
+import 'package:aplicacion_01/src/view/menu.dart';
 import 'package:aplicacion_01/src/view/menupuestos.dart';
 import 'package:aplicacion_01/src/view/puesto1.dart';
-import 'package:aplicacion_01/src/view/puesto2.dart';
-import 'package:aplicacion_01/src/view/puesto3.dart';
+//import 'package:aplicacion_01/src/view/puesto2.dart';
+//import 'package:aplicacion_01/src/view/puesto3.dart';
+import 'package:aplicacion_01/src/view/recuperarpass.dart';
+//import 'package:aplicacion_01/src/view/recuperarpass.dart';
 import 'package:aplicacion_01/src/view/totalespacio.dart';
-import 'package:aplicacion_01/src/view/menu.dart';
 import 'package:flutter/material.dart';
 
 
@@ -27,15 +29,17 @@ class MyApp extends StatelessWidget {
 
         routes:<String, WidgetBuilder>{
           "/puesto1" : (BuildContext context) => Puesto1View(),
-          "/puesto2" : (BuildContext context) => Puesto2View(),
-          "/puesto3" : (BuildContext context) => Puesto3View(),
+         // "/puesto2" : (BuildContext context) => Puesto2View(),
+          //"/puesto3" : (BuildContext context) => Puesto3View(),
           "/menupuestos" : (BuildContext context) => MenuPuestosView(),
-          "/fechasPagos" : (BuildContext context) => FechasPagoView(),
-          "/totalpuestos" : (BuildContext context) => TotalPuestosView(),
+          "/fechasPagos" : (BuildContext context) => FechasPagosView(),
+          "/totalpuestos" : (BuildContext context) => TotalpuestoView(),
           "/HomeView" : (BuildContext context) => HomeView(),
+          "/recuperarpw" : (BuildContext context) => ResPassw(),
+          "/pasarmenu" : (BuildContext context) => MenuView(),
         },
 
-     home:MenuView(),
+     home:HomeView()
   
     );
   }

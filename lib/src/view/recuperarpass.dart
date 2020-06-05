@@ -132,12 +132,12 @@ class ResPasswViewState extends State<ResPassw> {
                             color: Colors.grey,
                           ),
                           RaisedButton(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  "Recuperar Contraña",
+                                  "Recuperar Contraseña",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -145,7 +145,9 @@ class ResPasswViewState extends State<ResPassw> {
                                 ),
                               ],
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.pushNamed(context, "/pasarmenu");
+                            },
                             color: Colors.green,
                           ),
                         ],

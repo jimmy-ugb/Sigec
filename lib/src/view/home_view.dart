@@ -131,9 +131,7 @@ class HomeViewState extends State<HomeView> {
                                 )),
                             obscureText: true,
                           ),
-                          Divider(
-                            color: Colors.grey,
-                          ),
+                          Divider(color: Colors.grey),
                           RaisedButton(
                             padding: const EdgeInsets.all(20.0),
                             child: Column(
@@ -148,13 +146,35 @@ class HomeViewState extends State<HomeView> {
                                 ),
                               ],
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, "/recuperarpw");
+                            },
                             color: Colors.green,
+                          ),
+                          Divider(color: Colors.white),
+                          RaisedButton(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  "¿Olvidaste tu contraseña?",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, "/recuperarpw");
+                            },
+                            color: Colors.white,
                           ),
                         ],
                       ),
                     ),
-                    renderCodigoView(),
+                    // renderResetView(),
                   ],
                 ),
               ],
@@ -163,12 +183,10 @@ class HomeViewState extends State<HomeView> {
         ));
   }
 
-  Widget renderCodigoView() {
+  Widget renderResetView() {
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 0.00, vertical: 15.00),
         child: Text("¿Olvidaste tu Contraseña?",
             style: TextStyle(color: Colors.black)));
-            
-          
   }
 }
